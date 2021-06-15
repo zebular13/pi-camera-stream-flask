@@ -1,16 +1,15 @@
-#Modified by smartbuilds.io
-#Date: 27.09.20
-#Desc: This scrtipt script..
+#Modified by Monica Houston
+#Date: 06.14.21
 
 import cv2
-from imutils.video.pivideostream import PiVideoStream
+from imutils.video.webcamvideostream import WebcamVideoStream
 import imutils
 import time
 import numpy as np
 
 class VideoCamera(object):
     def __init__(self, flip = False):
-        self.vs = PiVideoStream().start()
+        self.vs = WebcamVideoStream(src=1).start()
         self.flip = flip
         time.sleep(2.0)
 
